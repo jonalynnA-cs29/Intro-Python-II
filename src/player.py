@@ -46,6 +46,7 @@ class Player:
     def drop_item(self, item):  # Add ability to drop item from player inventory
         if item in self.inventory:
             self.inventory.remove(item)
+            self.current_room.items.append(item)
             for i in self.inventory:
                 print(f"\n You dropped the {i.name}")
                 self.get_inventory()
