@@ -31,6 +31,7 @@ class Player:
     def take_item(self, item):  # Add ability to add item to player inventory
         if item not in self.inventory and item in self.current_room.items:
             self.inventory.append(item)
+            self.current_room.items.remove(item)
             for i in self.inventory:
                 print(
                     f"\n\n\nITEM: {i.name}\nDESCIPTION: {i.description}\nFYI: Check your inventory at any time[i] then[Enter]<<<"

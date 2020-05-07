@@ -17,3 +17,6 @@ class Room:
 
     def add_item_to_room(self, item):  # Add capability to add items to room
         item.append(item)
+
+    def remove_item_from_room(self, item):  # Remove from room if picked up
+        item.remove(item)
