@@ -25,17 +25,17 @@ items = {
 
 # Declare all the rooms
 room = {
-    'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons.", [items["keychain"]]),
+    'outside': Room("Outside Cave Entrance",
+                    "North of you, the cave mount beckons.", [items["keychain"]]),
 
-    'foyer':    Room("Foyer",
-                     "Dim light filters in from the south. \nDusty passages run north and east.", [items["elixer"], items["dagger"]]),
+    'foyer': Room("Foyer",
+                  "Dim light filters in from the south. \nDusty passages run north and east.", [items["elixer"], items["dagger"]]),
 
     'overlook': Room("Grand Overlook", """A steep cliff appears before you, falling
 into the darkness. \nAhead to the north, a light flickers in
 the distance, \nbut there is no way across the chasm.""", [items["sword"], items["flashlight"]]),
 
-    'narrow':   Room("Narrow Passage", """The narrow passage bends here from west
+    'narrow': Room("Narrow Passage", """The narrow passage bends here from west
 to north. \nThe smell of gold permeates the air.""", [items["rope"]]),
 
     'treasure': Room("Treasure Chamber", """You've found the long-lost treasure
@@ -100,6 +100,9 @@ while gameIsPlaying:
 
     elif user_input_item in drop:
         player.drop_item(item)
+
+    # elif user_input_item == "drop {item}": NOTE: I wanted to be able to drop specific item but not sure how
+    #     player.drop_item(item)
 
     elif user_input_item == "i":
         player.get_inventory()
